@@ -10,17 +10,21 @@ THEME="${HOME}/.cheeet/cheatsheet.rasi"
 
 function Detail(){
     option="$1"
+    echo "option: $option"
     SHEET="$2"
     LINE1=`awk 'NR==1' $Lib/"$SHEET"`
     t1=`echo $LINE1|cut -d '|' -f 2`
     t2=`echo $LINE1|cut -d '|' -f 3`
     t3=`echo $LINE1|cut -d '|' -f 4`
     t4=`echo $LINE1|cut -d '|' -f 5`
-    LINE=`grep "$option" $Lib/"$SHEET"`
-    n1=`echo $LINE|cut -d '|' -f 2`
-    n2=`echo $LINE|cut -d '|' -f 3`
-    n3=`echo $LINE|cut -d '|' -f 4`
-    n4=`echo $LINE|cut -d '|' -f 5`
+    n2=`echo $option|cut -d '|' -f 3|sed 's/"/\"/g'`
+    LINE=`grep -F "$option" $Lib/"$SHEET"`
+    echo "LINE: $LINE."
+    n1=`echo $LINE|cut -d '|' -f 2|sed 's/"/\\"/g'`
+    echo "n1: $n1."
+    echo "n2: $n2."
+    n3=`echo $LINE|cut -d '|' -f 4|sed 's/"/\\"/g'`
+    n4=`echo $LINE|cut -d '|' -f 5|sed 's/"/\\"/g'`
     DETAIL=`echo -e "$t1: $n1\n$t2: $n2\n$t3: $n3\n$t4 $n4"`
     rofi -dmenu -p "Detail"  -config $THEME -mesg "$DETAIL"
 

@@ -1,4 +1,4 @@
-| App      | Key            | Description                                       | Detail               |
+| App      | Key                     | Description                                       | Detail               |
 | org-mode | =M-x org-info=          | To read the on-line documentation try             |                      |
 | org-mode | =TAB=                   | rotate current subtree between states             |                      |
 | org-mode | =S-TAB=                 | rotate entire buffer between states               |                      |

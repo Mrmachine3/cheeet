@@ -1,12 +1,21 @@
 * Intro
   It's so diffcuclt for me to remember various parameters and keybinds.
+
   I find rofi could help me do that, just write them into files and then use =rofi= to query. So I wrote a litte script and a concise rofi theme.
+
   Currently I am using org-mode for formatting cheatsheet files, and maybe I would write a script to do that someday.
+
   Hope this script could help people facing the problem of reciting parameters and keybinds.
-  Open for PR and cheatsheet.
+
+  Share your cheasheet.
+  
+  open for PR.
   
 ** Cheatsheet file structure
-	| App or command | keybind or parameter | Description |
+   #+BEGIN_SRC 
+   | App or command | keybind or parameter | Description |   
+   #+END_SRC
+
 	- The first line is for prompt, just copy this line
 	- The other lines should be contents
 * Preview
@@ -25,4 +34,7 @@
 #+BEGIN_SRC 
     bindsym $mod+x exec "~/.cheeet/cheatsheet.sh"
 #+END_SRC
+
+* Credits
+** Git cheatsheet: https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf
 

@@ -43,8 +43,6 @@
    The fourth column is "Note" that you could add something important or some personal considerations which only shows in the detail page.
 
 * Preview & Usage
-
-
 ** All cheatsheets mode
    Show all apps/commands cheatsheets in one page. command:
 
@@ -56,16 +54,19 @@
    [[https://raw.githubusercontent.com/wangzme/cheeet/master/mode_all.png]]
    
 ** Single app mode
-   1. The first page shows all apps/commands.
-   2. Enter an specific app
-   command:
+   
+	The first page shows all apps/commands, then enter an specific app cheatsheet.
 
-   #+BEGIN_SRC shell
-   ~/.cheeet/cheatsheet.sh sgl
-   #+END_SRC
+	Both in All cheatsheets mdoe and single app mode you can enter the detail page.
 
-   Preview:
-   [[https://raw.githubusercontent.com/wangzme/cheeet/master/mode_sgl.png]]
+	command:
+
+	#+BEGIN_SRC shell
+	~/.cheeet/cheatsheet.sh sgl
+	#+END_SRC
+
+	Preview:
+	[[https://raw.githubusercontent.com/wangzme/cheeet/master/mode_sgl.png]]
 
 ** With i3
    If you are using i3-wm, just add this line into you i3-wm config:
@@ -73,6 +74,30 @@
      bindsym $mod+x exec "~/.cheeet/cheatsheet.sh all" # all cheatsheets mode
  #+END_SRC
 
+** Add /Note/ column
+   For example, command =convert -> -append= in the orginal cheatsheet file (lib/convert) like:
+   #+BEGIN_SRC org
+   | convert | -append                            | append an image sequence | 
+   #+END_SRC
+
+   Then the detail page is:
+
+   #+BEGIN_SRC 
+   Command: convert
+   Parameter: -append
+   Description: append an image sequense
+   #+END_SRC
+
+   As we know =+append= is appending images horizontally and =-append= is appending images vertically.
+   So you can append it after the third column.
+
+   The detail page after editing.
+   #+BEGIN_SRC 
+   Command: convert
+   Parameter: -append
+   Description: append an image sequense
+   Note: +append is appending images horizontally and -append is appending images vertically.
+   #+END_SRC
 
 * Install 
   Clone this repo into ~/.cheeet

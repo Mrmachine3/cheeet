@@ -5,13 +5,13 @@
  */
 
 * {
-    background:             #d8d8d880;
-    foreground:             #1f1f1f;
+    background:             #3a3a3a80;
+    foreground:             #d8d8d8;
     transparent:            #00000000;
     yellow:                 #ffa131;
-    blue:                   #1a75ea;
+    blue:                   #4169d5;
     selected-normal-background: @blue;
-    message-color:          #bdbdbd;
+    message-color:          #505050;
     font:                   "IBM Plex Mono 14";
 }
 #window {
@@ -48,7 +48,7 @@
     background-color:       @transparent;
     text-color:       @foreground;
     border:  1px 0 0 0;
-    border-color: #aaaaaa;
+    border-color: #606060;
     padding: 3px 6px 3px ;
 
 }

@@ -4,6 +4,7 @@
 # Author: Wangz
 
 # Lib
+Dir="${HOME}/.cheeet"
 Lib="${HOME}/.cheeet/lib"
 THEME="${HOME}/.cheeet/cheatsheet.rasi"
 
@@ -52,6 +53,18 @@ function App() {
     fi
 }
 
-App
+function ShowHelp() {
+    echo -e "    all -- show all apps/command cheatsheet in one page\n    sgl -- just show apps/commands in the first page   "
+}
+
+if [ "$1" == "all" ];then
+    cat $Lib/* > $Dir/all
+    Lib=$Dir
+    Sheet all
+elif [ "$1" == "sgl" ];then
+    App
+else 
+    ShowHelp
+fi
 
 

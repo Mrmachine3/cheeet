@@ -11,7 +11,7 @@
     yellow:                 #ffa131;
     blue:                   #4169d5;
     selected-normal-background: @blue;
-    message-color:          #505050;
+    message-color:          @transparent;
     font:                   "IBM Plex Mono 14";
 }
 #window {

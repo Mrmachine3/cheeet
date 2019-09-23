@@ -26,7 +26,7 @@ function Detail(){
     echo "n2: $n2."
     n3=`echo $LINE|cut -d '|' -f 4|sed 's/"/\\"/g'`
     n4=`echo $LINE|cut -d '|' -f 5|sed 's/"/\\"/g'`
-    DETAIL=`echo -e "$t1: $n1\n$t2: $n2\n$t3: $n3\n$t4 $n4"`
+    DETAIL=`echo -e "> $t1: $n1\n> $t2: $n2\n> $t3: $n3\n> $t4: $n4"`
     rofi -dmenu -p "Detail"  -config $THEME -mesg "$DETAIL"
 
 }
